@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        .pole{
+            position:absolute;
+            left:90px;
+        }
+        </style>
+    <script>
+        function spr(){
+        if(document.getElementById('login').value !='admin'){
+            alert('Niepoprawny login');
+            return false;
+        }
+        if(document.getElementById('haslo').value !='admin'){
+            alert('Błędne hasło');
+            return false;
+        }
+        return true;
+    }
+    </script>
+</head>
+<body bgcolor="#dfdfdf">
+    <form action="" method="post">
+        <b>Login</b>
+        <input class="pole" name="login" id="login" value="" size="40" onblur="return spr()"><br>
+        <b>hasło</b>
+        <input class="pole" name="haslo" id="haslo" value="" size="40" onblur="return spr()"><br>
+        <br><br>
+        <input type="submit" value="wyslij">&nbsp; &nbsp;
+    </form>
+    
+</body>
+</html>

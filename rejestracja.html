@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formularz rejestracyjny </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        function spr(){
+        var nazwisko=document.getElementById('nazwisko').value;
+        var imie=document.getElementById('imie').value;
+        var adres =document.getElementById('e-mail').value;
+        var wyk=document.getElementById('wyk').value;
+        var wiek=document.getElementById('wiek').value;
+        if(nazwisko===""|| imie===""||adres===""|| wyk===""|| wiek===""){
+            alert("musisz wypełnić wszystkie pola");
+            return false;
+        }
+        }
+    </script>
+    <style>
+        .container{font-family:Helvetica;
+            background-color: rgb(39, 39, 39);
+        }
+        body{
+            background-color: rgb(39, 39, 39);
+        }
+        *{font-family:Helvetica;}
+        header{
+            background-color: steelblue;
+            height:100px;
+            clear:both;
+            text-align: center;
+        }
+        section{
+        margin-right:150px;
+        padding:0px;
+        width:20%;
+        float:left;
+        border-right:1px solid black;
+        height:500px;
+        background-color: rgb(39, 39, 39);
+        }
+        form{
+            margin-left:20px;
+            
+        }
+
+        
+ul li{list-style-type: none;
+height:20px;
+background-color: steelblue;
+width:50%;
+margin: 5px;
+text-align: center;
+border:2px solid rgb(33, 125, 168);}
+a{text-decoration: none;
+color:white;}
+aside{
+    background-color: rgb(39, 39, 39);
+    float: left;
+    height: 450px;
+    color:white;
+
+}
+footer{background-color: steelblue;
+height: 100px;
+clear: both;}
+        </style>
+</head>
+<body>
+    
+        <header>
+            <h1>Formularz rejestracyjny</h1>
+        </header>
+            <div id="container">
+                <section>
+                    <form action="" method="post" onsubmit="return spr()">
+                    <ul>
+                        <li><a href="">Programy</a></li>
+                        <li><a href="">Sprzęt</a></li>
+                        <li><a href="">Systemy</a></li>
+                    </ul>
+                </section>
+<aside>
+<center>
+    <br>
+        <label for="login">Nazwisko
+            <input type="text" name="nazwisko" id="nazwisko" value="nazwisko" required></label>
+            <br>
+        <label for="imie">
+            Imię<input type="text" name="imie" id="imie" value="imie" required></label>
+            <br>
+        <label for="adres">adres
+            <input type="text" name="e-mail" id="e-mail" value="e-mail" required></label>
+            <br>
+        <label for="wyk">wykształcenie
+            <input type="text" name="wyk" id="wyk" value="wyk" onblur="return spr()" required></label>
+            <br>
+            <label for="wiek">wiek
+                <input type="number" name="wiek" id="wiek" value="wiek" onblur="return spr()" required></label>
+                <br>
+            <input type="submit" name="przycisk" value="zarejestruj się">
+        </aside>
+    </center>
+        
+        
+</form>
+    </div>
+        <footer></footer>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Warunek przy Zaznaczaniu Opcji</title>
+</head>
+<body>
+    <h1>Warunek przy Zaznaczaniu Opcji</h1>
+
+    <form>
+        <input type="checkbox" id="opcja" name="opcja" value="Tak">
+        <label for="opcja">tak</label>
+        <input type="checkbox" id="opcja2" name="opcja2" value="NIE">
+        <label for="opcja2">nie</label>
+        <input type="checkbox" id="opcja" name="opcja" value="Tak">
+        <label for="opcja">tak</label>
+        <input type="checkbox" id="opcja2" name="opcja2" value="NIE">
+        <label for="opcja2">Nie</label>
+    </form>
+
+    
+
+    <script>
+        // Pobierz referencję do checkboxa i komunikatu
+        var checkbox = document.getElementById("opcja");
+        var checkboxdwa = document.getElementById("opcja2");
+        var komunikat = document.getElementById("komunikat");
+
+        // Dodaj nasłuchiwanie zdarzenia zmiany stanu checkboxa
+        checkbox.addEventListener("change", function() {
+            if (checkbox.checked && checkboxdwa.checked) {
+                // Jeśli checkbox jest zaznaczony, pokaż komunikat
+                alert("postaw tylko  jedną opcję ");
+            } else {
+                // Jeśli checkbox jest odznaczony, ukryj komunikat
+                alert("gitara");
+            }
+        });
+    </script>
+</body>
+</html>

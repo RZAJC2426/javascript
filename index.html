@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <label for="liczba1">Liczba 1:</label>
+    <input type="number" id="liczba1">
+
+    <label for="liczba2">Liczba 2:</label>
+    <input type="number" id="liczba2">
+
+    <button onclick="dodaj()">Dodaj</button>
+
+    <p>Wynik: <span id="wynik"></span></p>
+ <script>
+    function dodaj() {
+            
+            var liczba1 = parseFloat(document.getElementById("liczba1").value);
+            var liczba2 = parseFloat(document.getElementById("liczba2").value);
+
+            
+            if (isNaN(liczba1) || isNaN(liczba2)) {
+                alert("Proszę wprowadzić poprawne liczby.");
+                return;
+            }
+
+            
+            var wynik = liczba1 + liczba2;
+
+    
+            document.getElementById("wynik").textContent = wynik;
+        }
+ </script>
+</body>
+Robert Zajac 
+</html>

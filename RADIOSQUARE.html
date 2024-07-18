@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pole Jednokrotnego Wyboru w Kształcie Kwadratu</title>
+    <style>
+        
+        .square-radio {
+            display:none 
+        }
+
+        .square-label {
+            width: 50px;
+            height: 50px; 
+            border: 2px solid #000; 
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+        }
+
+       
+        .square-label input:checked {
+            background-color: #007bff; 
+            color: #fff; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Pole Jednokrotnego Wyboru w Kształcie Kwadratu</h1>
+
+    <form>
+        <label class="square-label">
+            <input type="radio" class="square-radio" name="wybor" value="opcja1">
+            Opcja 1
+        </label>
+
+        <label class="square-label">
+            <input type="radio" class="square-radio" name="wybor" value="opcja2">
+            Opcja 2
+        </label>
+
+        <label class="square-label">
+            <input type="radio" class="square-radio" name="wybor" value="opcja3">
+            Opcja 3
+        </label>
+    </form>
+</body>
+</html>

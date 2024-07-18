@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    zawodnik:
+    <p id="player"></p>
+    Dane meczu zawodnika
+    b - blok
+    a - atak
+    o - out
+    s - as
+    x - wyjscie
+    <script>
+    do{
+
+
+
+        var zawodnik=document.getElementById("player").innerHTML=prompt("jaki zawodnik");
+     var wybor = prompt("podaj sposob, w jaki zawodnik stracil lub zdobyl punkty");
+        switch(wybor)
+        {
+            case "b":
+                alert("punkt po bloku");
+                break;
+            case "a":
+            alert("punkt z ataku");
+                break;
+            case "o":
+            alert("blad, pilka poza boiskiem");
+                break;
+            case "s":
+            alert("As serwisowy!");
+                break;
+            case "q":
+                alert("wyjscie");
+                
+                break;
+        } if(wybor=="q"){
+        break};
+       }
+        while (wybor="q");
+    
+        </script>
+</body>
+</html>

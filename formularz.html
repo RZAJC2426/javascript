@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>PŁYTKI - ZAMÓWIENIA</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    <header>
+        <h1>PŁYTKI - Formularz zamówienia</h1>
+    </header>
+    <aside></aside>
+    <aside>
+<form action="" method="post">
+    <input type="number" name="cenaplytki" step="0.01" id="cenaplytki" required>
+    <br>
+
+
+
+        <label for="cenaplytki">Cena m<sup>2</sup>płytki</label>
+        <br>
+    <input type="number" name="pow" id="pow"  step="0.01" required>
+    <br>
+
+    <label for="pow">Ilość m<sup>2</sup>powierzchni</label>
+    <br>
+    <input type="checkbox" name="duzaplytka" id="duzaplytka">
+
+    <label for="duzaplytka">Czy duża płytka?</label>
+    <br>
+    <input type="button" name="oblicz" id="oblicz" value="oblicz" onclick="oblicz()">
+    <br>
+    <p id ="rezultat"></p>
+</form>
+<script>
+    function oblicz(){
+        var cena=parseFloat(document.getElementById("cenaplytki").value);
+        var powierzchnia=parseFloat(document.getElementById("pow").value);
+        var check=document.getElementById("duzaplytka").checked;
+        document.write("dfgf");
+        if(check==1){
+        var koszt=cena*powierzchnia*mnoznik;}
+        document.getElementById('rezultat').innerHTML=' koszt położenia wynosi:'+koszt;
+        if(cena =="" || powierzchnia==""){
+            prompt("proszę wypełnić pola");
+            return false;
+        }
+    }
+            
+        
+</script>
+
+
+    </aside>
+    <footer><p>Stronę wykonał: 123456789</p></footer>
+    
+</body>
+</html>
